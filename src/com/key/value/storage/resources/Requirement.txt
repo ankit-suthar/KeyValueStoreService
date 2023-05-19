@@ -1,0 +1,34 @@
+Implement a Key-Value Store Service which should persist its state across restarts.
+
+A Key-value Store is a service that enables a user to store a value linked to a key and it should also provide ways to retrieve that value using the key and also delete the value.
+A Persistent store is something that retains its state across restarts.
+
+So, here you will have to create a service that exposes REST Api’s to create, read, update and delete a key-value pair. This service should be fast(Any key-value store should be fast.) and should retain back the state when restarted.
+Expectations:
+
+Implement the REST endpoint for the service.
+Key can be any STRING and value can be arbitrary JSON.
+Design of the storage.
+Modularity, extensibility of the code.
+
+
+
+Key -> String
+Value -> Json -> Map<Object, Object>
+
+Key, Value -> Map<String, (Map<Object, Object>, timestamp)>
+
+On restart retain data -> File
+
+Key, Value, Add/Delete/Update, timestamp
+
+Key1, Value1, Add, t1
+Key1, Value2, Update, t2
+
+t2>t1
+
+Key1, Value2, Delete, t3
+
+Actual API
+Maintain memory when app restart
+concurrancy of parallel operation

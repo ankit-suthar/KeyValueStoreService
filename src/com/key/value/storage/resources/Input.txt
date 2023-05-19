@@ -1,0 +1,11 @@
+KEY1, ADD
+PRIM_KEY=personId
+SEX=gender
+YEARS=age
+NAME=fullName
+KEY2, UPDATE
+PRIM_KEY=registrationNumber
+MAKE=manufacturer
+TYPE=model
+KEY3, DELETE
+KEY4, READ
